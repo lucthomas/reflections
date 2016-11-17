@@ -19,6 +19,18 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+    This is the process once a repository has been initialized:
+    1. Use "git add filename" to add a file or multiple files to the staging area
+    2. Use "git diff" (without Id's) to compare the working directory and the staging area
+    3. Make sure that you checkout the most recent file in the repository by means of "git checkout master"
+    4. Use "git diff --staged" to compare the difference between the versions within the staging area and the repository (most recent commit)
+    5. Use "git commit" to commit all files in the staging area into the repository
+
+    Once you went through this process you can go again through this process to commit a logically different file or change!!!
+
+    NOTE: you can use "git reset --hard" if you decide that you which to reset the changes made in the working directory and staging area
+    This in fact means that the staging area will be empty! This is irreversible, so be careful with that command!
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
