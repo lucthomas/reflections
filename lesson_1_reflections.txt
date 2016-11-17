@@ -1,0 +1,44 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    The diff (Unix/Linux) is very useful to find errors in huge new version files based
+    based on the difference between the old and new file.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    It allows me to use the backup when necessary. It also shows the progress direction.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    PROs:   1. we can choose under what conditions we commit (save the changes in a file)
+            2. interesting conditions are: every timespan, every time a logical condition has changed (bugs, syntax errors, etc.)
+            3. with smart commits memory can be saved
+    CONs:   1. we need to program the commits
+            2. we might lose updates whenever our pc crashes
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    sometimes files are interrelated with each other such as .css, .js and .html files. Due to their relationship with each other
+    it makes a lot of sense to commit all these multiple files at once at for example 6.45am rather than committing them separately.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    git log: this command allows to see all the saved files, their save date and hour and the reason why it was changed / break with q command
+    git diff firstid secondid: this command allows to compare the previous file with the current one
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    By using the 'git checkout: idIWantToCheckOut' command, it is becomes possible to checkout different versions (commits) of the file in history which
+    allows me to see when a bug came to exist. Once I know between which versions the bug came about, I can use 'git diff firstId secondId' to
+    see what has been removed and added. This is so powerful!
+    NOTE: it is very important to keep the most recent Id such that we can get back to it by means of the git checkout command.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Git seems to be perfect to find back older versions of a file, to implement a commit strategy and (not yet sure how) and to compare versions of a file.
+    I am also curious about the extra functionalities in the VM virtualbox and its corresponding software vagrant (allowing to use more commands).
