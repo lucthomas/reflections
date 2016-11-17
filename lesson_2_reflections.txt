@@ -20,10 +20,17 @@ How can you use the staging area to make sure you have one commit per logical
 change?
 
     This is the process once a repository has been initialized:
+
     1. Use "git add filename" to add a file or multiple files to the staging area
+
     2. Use "git diff" (without Id's) to compare the working directory and the staging area
+
     3. Make sure that you checkout the most recent file in the repository by means of "git checkout master"
+
+    NOTE: checkout of most recent commit in master branch (more about branches later in this lesson)
+
     4. Use "git diff --staged" to compare the difference between the versions within the staging area and the repository (most recent commit)
+
     5. Use "git commit" to commit all files in the staging area into the repository
 
     Once you went through this process you can go again through this process to commit a logically different file or change!!!
@@ -34,13 +41,52 @@ change?
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+    First I wish to discuss how to create branches:
+
+    1. Use "git branch branchname" to create a new branch
+    2. Use "git branch" to see all existing branches
+    3. Use "git checkout branchname" to check out the chosen branch
+    4. Now you can commit into the chosen branch without editing the masterbranch
+
+    NOTE: Use "git checkout -b newbranchname" to do step 1 and 3 simultaneously.
+
+    Branches are very useful in case you wish to keep an original version easily, for example when making a version in another language.
+
 How do the diagrams help you visualize the branch structure?
+
+    To visualize the branch structure in git, one can use the command "git log --graph --oneline master branchname1 branchname2" for example.
+    Once the diagram is visible one can easily see what commit is linked to what branch.
+
+    Keeping a diagram of the branch structure as you make it is useful such that it becomes clear which branches are reachable and which ones aren't.
+
+    NOTE: A parent commit is only reachable by its children in a branch. It is not possible to reach a child commit in another branch when being checked out in a child commit. (See Reachability in videos)
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    We can merge two branches with "git merge branchname1 branchname2" such that branch2 will be add into branch1 based on the origin of both branches.
+    We can then delete for instance branch2 by means of "git branch -d branchname2"
+
+    Merging branches is very powerful because it actually allows you to combine two different paths of changes into one commit!
+    We represent it in the diagram the way we do, because this allows us to see which commits are reachable by the merged commit/branch.
+
+    NOTE: Use "git gc" (gc = garbage collection) to manually delete the unreachable commits.
+    NOTE: Use "git merge --abort" to go back to the state before the merge.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+    Automerging:    1. git's automatic merging is awesome, since it allows you to merge without having to much to worry about
+                    2. the backlash is that it could be that there is some unfavorable code that comes along with it, but if the programmers working on the project are great at what they do this disadvantage is negligible.
+
+    Manual Merging  1. manual merging happens when two branches are different, but in a way that git's machine learning algorithm can't figure out what to do.
+                    Git then shows you where this merging conflict occurs such that you can manually decide what to do. This is a good thing, rather than git making errors all the time.
+                    2. Manual merging takes more time though.
+
+    NOTE: it is important to commit (working directory => staging area => repository) to the manual merge in order to ensure that it is permanent.
+    NOTE: use 'git log -n amountOfVisibleCommits' to only see the most recent commits
+
+
 
 
 COMMIT MESSAGE TYPES
