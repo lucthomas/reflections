@@ -101,3 +101,15 @@ COMMIT MESSAGE TYPES
     refactor: refactoring production code
     test: adding tests, refactoring test; no production code change
     chore: updating build tasks, package manager configs, etc; no production code change
+
+USING GITHUB
+
+    To push your repository to your github account do the following:
+
+    1. Go to the directory with the files you wish to push to Github
+    1bis. Create a new repository on Github
+    2. Use "git remote add origin(or other name) https://github.com/..."
+    3. You just created a remote repository on Github that you can view with "git remote"
+    4. Use "git push origin master" to push the master branch to the origin repository!
+    5. Fill in Github username and password
+    6. Find your files in the newly created repository in Github
