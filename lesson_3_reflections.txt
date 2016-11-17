@@ -15,10 +15,19 @@ automatically stay up-to-date with your remote repository?
 
     This might fill up memory space on your local pc that is not necessary.
 
+    NOTE: use "touch filename.txt or .html, etc." to add a file in a folder
+
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    Forking: the act of pressing fork button in Github concerning someone else's repository. This then leads to this repository being cloned
+    to your github account. But it is not cloned to your local pc.
+
+    Cloning: cloning by means of "git clone https://github.com/..." is a means of cloning a repository from Github to your local pc such that
+    you can interact with it with your Git.
+
+    Branches: these are different versions (commits) of your files branched out in different branches such that you can easily transition from
+    one version to the other without knowing the Id's of the versions.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
