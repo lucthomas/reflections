@@ -3,8 +3,12 @@ local?
 
     A remote repository seems pretty awesome for collaboration. I place my commits and files on Github and somebody
     else can do this as well. As such the Github repository represents the complete work. I can imagine that Github
-    allows me to fetch files of others to place it on my local pc such that I can interact with them without changing
+    allows me to pull files of others to place it on my local pc such that I can interact with them without changing
     the work of my colleagues.
+    
+    See all about "git remote" and "git push" in lesson 2
+    
+    NOTE: In order to pull files from Github to Git you can use "git pull origin(or chosen remoteName) master(or chosen branchName).
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
