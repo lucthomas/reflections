@@ -1,7 +1,10 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    Fill in your answer here
+    A remote repository seems pretty awesome for collaboration. I place my commits and files on Github and somebody
+    else can do this as well. As such the Github repository represents the complete work. I can imagine that Github
+    allows me to fetch files of others to place it on my local pc such that I can interact with them without changing
+    the work of my colleagues.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
