@@ -32,14 +32,22 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    First of all, it is important to understand that "git pull origin master" = "git fetch origin" (fetching the master head of Github and locally adding this master head as a commit called origin/master) + "git merge origin/master master" (merge the origin/master commit with the local master head commit into a new commit)
+
+    A copy of the last known state of the remote allows you to compare the last commit of the remote (Github; called origin/master) and the last one of the local (Git; called master). Finally it also allows to merge and to decide upon a possible merge conflict on how to change the code or the message.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    A pull request or merge pull request is in fact something you can do on Github when having created another branch, updated a file in that branch, committed it and pushed it to Github. The pull request is actually a request to one or all of your collaborators. An email is then send to them and they can react on your merge request. If they agree, they can merge the new branch into the master. Else they can comment on your work.
+
+    Collaboration without Git and Github seems hard, definitely in regards to code. I have had so much trouble in the past comparing my code with the one of school mates. Git(hub) rules!!!
+    The hard part is learning Git and Github. Everybody in your team needs to be able to interact with it!
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    Making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
+
+    Making changes in a separate branch allows you to go back to the original in master easily. However, there is the above added complexity when working with other
+    branches.
